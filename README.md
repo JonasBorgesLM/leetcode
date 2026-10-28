@@ -15,14 +15,12 @@ problems/
 ## Uso
 
 ```bash
-# criar um novo problema
-scripts/new.sh 1 two-sum easy
-
-# rodar todos os testes
-go test ./...
-
-# rodar os testes de um problema
-go test ./problems/0001-two-sum/
+make                              # lista os comandos
+make new N=1 S=two-sum D=easy     # cria problems/0001-two-sum/
+make test N=1                     # testa só esse problema
+make test                         # testa tudo
+make check                        # gofmt + go vet + testes, antes do commit
+make list                         # problemas já criados
 ```
 
 ## Problemas resolvidos
